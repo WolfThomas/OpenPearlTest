@@ -1,5 +1,6 @@
 import org.antlr.v4.runtime.*;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -22,13 +23,41 @@ public class Main {
       String directoryName = path.toAbsolutePath().toString();
       // DEBUG
 
+      Path filePath = Paths.get("PearlTest.prl");
+
+      for(int i=0; i < args.length; i++) {
+        String option = args[i];
+
+        if (option.startsWith("-h") || option.startsWith("-H")){
+          System.out.println("-f/-F Source file path");
+        }
+        else if (option.startsWith("-f") || option.startsWith("-F")) {
+          if ((i+1) <args.length) {
+            filePath = Paths.get(args[i + 1]);
+          }
+          else {
+            System.out.println("Error: invalid filepath");
+          }
+        }
+      }
+
       //ANTLRStringStream in = new ANTLRStringStream("12*(5-6)");
       //ExpLexer lexer = new ExpLexer(in);
       //CommonTokenStream tokens = new CommonTokenStream(lexer);
       //ExpParser parser = new ExpParser(tokens);
       //parser.eval();
 
-      CharStream input = CharStreams.fromFileName("code.txt");
+      if (filePath==null) {
+        System.out.println("Error: no file specified. See -h for help.");
+        return;
+      }
+      File file = new File(filePath.toString());
+      if (!file.exists()) {
+        System.out.println("Error: file not found. See -h for help.");
+        return;
+      }
+
+      CharStream input = CharStreams.fromFileName(filePath.toString());
       var lexer = new SmallPearlLexer(input);
 
       TokenStream tokenStream = new CommonTokenStream(lexer);
