@@ -37,13 +37,13 @@
    task/proc usage with list of identifiers
 
 */
-grammar SmallPearl;
+grammar OpenPearl;
 
 ////////////////////////////////////////////////////////////////////////////////
 
 @header
 {
-import org.smallpearl.compiler.SmallPearlLexer;
+import org.openpearl.compiler.OpenPearlLexer;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -85,7 +85,6 @@ program:
   module+
   ;
 
-////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
 ID :   Letter ( Letter | Digit | '_' )* ;
@@ -493,12 +492,12 @@ typeReference :
 	| typeStructure
 	| typeDation
 	| typeProcedure
-	| typeReferenceTaskType				//<< should become renamed to typeTask as well as taskType -> typeTask
-	| typeReferenceSemaType
-	| typeReferenceBoltType
-	| typeReferenceInterruptType		// << should become renamed to interruptType
-	| typeReferenceSignalType			// << should become renamed to signalType
-	| typeRefChar						// should stay typeRefChar; since type_char is in simpleType
+	| typeTask
+	| typeSema
+	| typeBolt
+	| typeInterrupt
+	| typeSignal
+	| typeRefChar
 	)
 	;
 
@@ -524,7 +523,7 @@ typeReferences
 typeReferenceSimpleType
     : assignmentProtection? simpleType
     ;
-*/
+
 
 typeReferenceStructuredType
     :
@@ -533,28 +532,31 @@ typeReferenceStructuredType
 typeReferenceDationType
     :
     ;
+*/
 
-typeReferenceSemaType
+typeSema
     : 'SEMA'
     ;
 
-typeReferenceBoltType
+typeBolt
     : 'BOLT'
     ;
 
-typeReferenceProcedureType
+/* already defines without globalAttribute
+typeProcedure
     : ('PROCEDURE' | 'PROC' )  listOfFormalParameters? resultAttribute? globalAttribute?
     ;
+*/
 
-typeReferenceTaskType
+typeTask
     : 'TASK'
     ;
 
-typeReferenceInterruptType
+typeInterrupt
     : ( 'INTERRUPT' | 'IRPT' )
     ;
 
-typeReferenceSignalType
+typeSignal
     : 'SIGNAL'
     ;
 
@@ -621,7 +623,7 @@ listOfFormalParameters :
 ////////////////////////////////////////////////////////////////////////////////
 
 formalParameter :
-    ( identifier | '(' identifier ( ',' identifier)* ')' ) virtualDimensionList? assignmentProtection? parameterType passIdentical?
+    ( identifier | '(' identifier ( ',' identifier)* ')' )? virtualDimensionList? assignmentProtection? parameterType passIdentical?
     ;
 
 identifier:
@@ -664,8 +666,15 @@ parameterType :
     | typeDation
     | typeReference
     | typeStructure
+    | typeRealTimeObject
     ;
 
+typeRealTimeObject :
+      typeSema
+    | typeBolt
+    | typeInterrupt
+    | typeSignal
+    ;
 
 ////////////////////////////////////////////////////////////////////////////////
 // DisableStatement ::=
@@ -913,7 +922,6 @@ charSelectionSlice:
 	;
 
 ////////////////////////////////////////////////////////////////////////////////
-
 
 sequential_control_statement:
       if_statement
@@ -2313,7 +2321,7 @@ fixedConstant
 ////////////////////////////////////////////////////////////////////////////////
 
 IntegerConstant
-	:	FloatingPointNumber
+	:	DecimalIntegerConstant
 	;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -2694,7 +2702,7 @@ STRING: '"' (~'"')* '"'
 //        try {
 //            System.out.println( "include file:" + getText());
 //            ANTLRFileStream inputStream = new ANTLRFileStream("/home/marcel/repositories/openpearl-code/openpearl-code/testsuite/build/TEST.PRL");
-//            org.smallpearl.compiler.OpenPearlLexer subLexer = new org.smallpearl.compiler.OpenlPearlLexer(inputStream);
+//            org.openpearl.compiler.OpenPearlLexer subLexer = new org.openpearl.compiler.OpenlPearlLexer(inputStream);
 //            subLexer.setFilename("/home/marcel/repositories/openpearl-code/openpearl-code/testsuite/build/TEST.PRL");
 //            selector.push(sublexer);
 //            selector.retry();

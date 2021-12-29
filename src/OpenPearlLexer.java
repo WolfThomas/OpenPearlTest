@@ -1,4 +1,4 @@
-// Generated from /Users/thomas/IdeaProjects/SmallPearlTest/src/SmallPearl.g4 by ANTLR 4.9.1
+// Generated from /Users/thomas/IdeaProjects/SmallPearlTest/src/OpenPearl.g4 by ANTLR 4.9.1
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.atn.ATN;
@@ -8,7 +8,7 @@ import org.antlr.v4.runtime.atn.PredictionContextCache;
 import org.antlr.v4.runtime.dfa.DFA;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class SmallPearlLexer extends Lexer {
+public class OpenPearlLexer extends Lexer {
 	static { RuntimeMetaData.checkVersion("4.9.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -107,20 +107,20 @@ public class SmallPearlLexer extends Lexer {
 			"'DECLARE'", "'DCL'", "'INV'", "'GLOBAL'", "'FIXED'", "'FLOAT'", "'BIT'", 
 			"'CHARACTER'", "'CHAR'", "'DURATION'", "'DUR'", "'CLOCK'", "'INITIAL'", 
 			"'INIT'", "'STRUCT'", "'['", "']'", "'REF'", "'()'", "'SEMA'", "'BOLT'", 
-			"'PROCEDURE'", "'PROC'", "'TASK'", "'INTERRUPT'", "'IRPT'", "'SIGNAL'", 
-			"'PRESET'", "'END'", "'IDENTICAL'", "'DISABLE'", "'ENABLE'", "'TRIGGER'", 
-			"'RETURNS'", "'MAIN'", "'CALL'", "'RETURN'", "'GOTO'", "'EXIT'", "':='", 
-			"'='", "'CONT'", "'.'", "'+'", "'IF'", "'FIN'", "'THEN'", "'ELSE'", "'CASE'", 
-			"'ALT'", "'OUT'", "'BEGIN'", "'REPEAT'", "'FOR'", "'FROM'", "'BY'", "'TO'", 
-			"'WHILE'", "'TERMINATE'", "'SUSPEND'", "'CONTINUE'", "'RESUME'", "'PREVENT'", 
-			"'ACTIVATE'", "'PRIORITY'", "'PRIO'", "'ALL'", "'UNTIL'", "'DURING'", 
-			"'AFTER'", "'AT'", "'WHEN'", "'REQUEST'", "'RELEASE'", "'TRY'", "'RESERVE'", 
-			"'FREE'", "'ENTER'", "'LEAVE'", "'OPEN'", "'IDF'", "'OLD'", "'NEW'", 
-			"'ANY'", "'CAN'", "'PRM'", "'CLOSE'", "'GET'", "'PUT'", "'WRITE'", "'READ'", 
-			"'TAKE'", "'SEND'", "'COL'", "'LINE'", "'POS'", "'SOP'", "'RST'", "'PAGE'", 
-			"'SKIP'", "'X'", "'ADV'", "'EOF'", "'F'", "'E'", "'E3'", "'B'", "'B1'", 
-			"'B2'", "'B3'", "'B4'", "'T'", "'D'", "'A'", "'S'", "'CREATED'", "'DATION'", 
-			"'IN'", "'INOUT'", "'ALPHIC'", "'BASIC'", "'DIRECT'", "'FORWARD'", "'FORBACK'", 
+			"'TASK'", "'INTERRUPT'", "'IRPT'", "'SIGNAL'", "'PRESET'", "'END'", "'PROCEDURE'", 
+			"'PROC'", "'IDENTICAL'", "'DISABLE'", "'ENABLE'", "'TRIGGER'", "'RETURNS'", 
+			"'MAIN'", "'CALL'", "'RETURN'", "'GOTO'", "'EXIT'", "':='", "'='", "'CONT'", 
+			"'.'", "'+'", "'IF'", "'FIN'", "'THEN'", "'ELSE'", "'CASE'", "'ALT'", 
+			"'OUT'", "'BEGIN'", "'REPEAT'", "'FOR'", "'FROM'", "'BY'", "'TO'", "'WHILE'", 
+			"'TERMINATE'", "'SUSPEND'", "'CONTINUE'", "'RESUME'", "'PREVENT'", "'ACTIVATE'", 
+			"'PRIORITY'", "'PRIO'", "'ALL'", "'UNTIL'", "'DURING'", "'AFTER'", "'AT'", 
+			"'WHEN'", "'REQUEST'", "'RELEASE'", "'TRY'", "'RESERVE'", "'FREE'", "'ENTER'", 
+			"'LEAVE'", "'OPEN'", "'IDF'", "'OLD'", "'NEW'", "'ANY'", "'CAN'", "'PRM'", 
+			"'CLOSE'", "'GET'", "'PUT'", "'WRITE'", "'READ'", "'TAKE'", "'SEND'", 
+			"'COL'", "'LINE'", "'POS'", "'SOP'", "'RST'", "'PAGE'", "'SKIP'", "'X'", 
+			"'ADV'", "'EOF'", "'F'", "'E'", "'E3'", "'B'", "'B1'", "'B2'", "'B3'", 
+			"'B4'", "'T'", "'D'", "'A'", "'S'", "'CREATED'", "'DATION'", "'IN'", 
+			"'INOUT'", "'ALPHIC'", "'BASIC'", "'DIRECT'", "'FORWARD'", "'FORBACK'", 
 			"'NOCYCL'", "'CYCLIC'", "'STREAM'", "'NOSTREAM'", "'DIM'", "'*'", "'TFU'", 
 			"'MAX'", "'ATAN'", "'COS'", "'EXP'", "'LN'", "'SIN'", "'SQRT'", "'TAN'", 
 			"'TANH'", "'ABS'", "'SIGN'", "'SIZEOF'", "'LENGTH'", "'NOT'", "'TOBIT'", 
@@ -192,13 +192,13 @@ public class SmallPearlLexer extends Lexer {
 	}
 
 
-	public SmallPearlLexer(CharStream input) {
+	public OpenPearlLexer(CharStream input) {
 		super(input);
 		_interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
 	@Override
-	public String getGrammarFileName() { return "SmallPearl.g4"; }
+	public String getGrammarFileName() { return "OpenPearl.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -267,9 +267,9 @@ public class SmallPearlLexer extends Lexer {
 		"\3\31\3\31\3\31\3\31\3\31\3\31\3\31\3\32\3\32\3\32\3\32\3\33\3\33\3\33"+
 		"\3\33\3\33\3\33\3\34\3\34\3\34\3\34\3\34\3\34\3\34\3\34\3\35\3\35\3\35"+
 		"\3\35\3\35\3\36\3\36\3\36\3\36\3\36\3\36\3\36\3\37\3\37\3 \3 \3!\3!\3"+
-		"!\3!\3\"\3\"\3\"\3#\3#\3#\3#\3#\3$\3$\3$\3$\3$\3%\3%\3%\3%\3%\3%\3%\3"+
-		"%\3%\3%\3&\3&\3&\3&\3&\3\'\3\'\3\'\3\'\3\'\3(\3(\3(\3(\3(\3(\3(\3(\3("+
-		"\3(\3)\3)\3)\3)\3)\3*\3*\3*\3*\3*\3*\3*\3+\3+\3+\3+\3+\3+\3+\3,\3,\3,"+
+		"!\3!\3\"\3\"\3\"\3#\3#\3#\3#\3#\3$\3$\3$\3$\3$\3%\3%\3%\3%\3%\3&\3&\3"+
+		"&\3&\3&\3&\3&\3&\3&\3&\3\'\3\'\3\'\3\'\3\'\3(\3(\3(\3(\3(\3(\3(\3)\3)"+
+		"\3)\3)\3)\3)\3)\3*\3*\3*\3*\3+\3+\3+\3+\3+\3+\3+\3+\3+\3+\3,\3,\3,\3,"+
 		"\3,\3-\3-\3-\3-\3-\3-\3-\3-\3-\3-\3.\3.\3.\3.\3.\3.\3.\3.\3/\3/\3/\3/"+
 		"\3/\3/\3/\3\60\3\60\3\60\3\60\3\60\3\60\3\60\3\60\3\61\3\61\3\61\3\61"+
 		"\3\61\3\61\3\61\3\61\3\62\3\62\3\62\3\62\3\62\3\63\3\63\3\63\3\63\3\63"+
@@ -452,8 +452,8 @@ public class SmallPearlLexer extends Lexer {
 		"\3\2\2\2+\u024e\3\2\2\2-\u0252\3\2\2\2/\u025c\3\2\2\2\61\u0261\3\2\2\2"+
 		"\63\u026a\3\2\2\2\65\u026e\3\2\2\2\67\u0274\3\2\2\29\u027c\3\2\2\2;\u0281"+
 		"\3\2\2\2=\u0288\3\2\2\2?\u028a\3\2\2\2A\u028c\3\2\2\2C\u0290\3\2\2\2E"+
-		"\u0293\3\2\2\2G\u0298\3\2\2\2I\u029d\3\2\2\2K\u02a7\3\2\2\2M\u02ac\3\2"+
-		"\2\2O\u02b1\3\2\2\2Q\u02bb\3\2\2\2S\u02c0\3\2\2\2U\u02c7\3\2\2\2W\u02ce"+
+		"\u0293\3\2\2\2G\u0298\3\2\2\2I\u029d\3\2\2\2K\u02a2\3\2\2\2M\u02ac\3\2"+
+		"\2\2O\u02b1\3\2\2\2Q\u02b8\3\2\2\2S\u02bf\3\2\2\2U\u02c3\3\2\2\2W\u02cd"+
 		"\3\2\2\2Y\u02d2\3\2\2\2[\u02dc\3\2\2\2]\u02e4\3\2\2\2_\u02eb\3\2\2\2a"+
 		"\u02f3\3\2\2\2c\u02fb\3\2\2\2e\u0300\3\2\2\2g\u0305\3\2\2\2i\u030c\3\2"+
 		"\2\2k\u0311\3\2\2\2m\u0316\3\2\2\2o\u0319\3\2\2\2q\u031b\3\2\2\2s\u0320"+
@@ -556,21 +556,21 @@ public class SmallPearlLexer extends Lexer {
 		"\7H\2\2\u028fB\3\2\2\2\u0290\u0291\7*\2\2\u0291\u0292\7+\2\2\u0292D\3"+
 		"\2\2\2\u0293\u0294\7U\2\2\u0294\u0295\7G\2\2\u0295\u0296\7O\2\2\u0296"+
 		"\u0297\7C\2\2\u0297F\3\2\2\2\u0298\u0299\7D\2\2\u0299\u029a\7Q\2\2\u029a"+
-		"\u029b\7N\2\2\u029b\u029c\7V\2\2\u029cH\3\2\2\2\u029d\u029e\7R\2\2\u029e"+
-		"\u029f\7T\2\2\u029f\u02a0\7Q\2\2\u02a0\u02a1\7E\2\2\u02a1\u02a2\7G\2\2"+
-		"\u02a2\u02a3\7F\2\2\u02a3\u02a4\7W\2\2\u02a4\u02a5\7T\2\2\u02a5\u02a6"+
-		"\7G\2\2\u02a6J\3\2\2\2\u02a7\u02a8\7R\2\2\u02a8\u02a9\7T\2\2\u02a9\u02aa"+
-		"\7Q\2\2\u02aa\u02ab\7E\2\2\u02abL\3\2\2\2\u02ac\u02ad\7V\2\2\u02ad\u02ae"+
-		"\7C\2\2\u02ae\u02af\7U\2\2\u02af\u02b0\7M\2\2\u02b0N\3\2\2\2\u02b1\u02b2"+
-		"\7K\2\2\u02b2\u02b3\7P\2\2\u02b3\u02b4\7V\2\2\u02b4\u02b5\7G\2\2\u02b5"+
-		"\u02b6\7T\2\2\u02b6\u02b7\7T\2\2\u02b7\u02b8\7W\2\2\u02b8\u02b9\7R\2\2"+
-		"\u02b9\u02ba\7V\2\2\u02baP\3\2\2\2\u02bb\u02bc\7K\2\2\u02bc\u02bd\7T\2"+
-		"\2\u02bd\u02be\7R\2\2\u02be\u02bf\7V\2\2\u02bfR\3\2\2\2\u02c0\u02c1\7"+
-		"U\2\2\u02c1\u02c2\7K\2\2\u02c2\u02c3\7I\2\2\u02c3\u02c4\7P\2\2\u02c4\u02c5"+
-		"\7C\2\2\u02c5\u02c6\7N\2\2\u02c6T\3\2\2\2\u02c7\u02c8\7R\2\2\u02c8\u02c9"+
-		"\7T\2\2\u02c9\u02ca\7G\2\2\u02ca\u02cb\7U\2\2\u02cb\u02cc\7G\2\2\u02cc"+
-		"\u02cd\7V\2\2\u02cdV\3\2\2\2\u02ce\u02cf\7G\2\2\u02cf\u02d0\7P\2\2\u02d0"+
-		"\u02d1\7F\2\2\u02d1X\3\2\2\2\u02d2\u02d3\7K\2\2\u02d3\u02d4\7F\2\2\u02d4"+
+		"\u029b\7N\2\2\u029b\u029c\7V\2\2\u029cH\3\2\2\2\u029d\u029e\7V\2\2\u029e"+
+		"\u029f\7C\2\2\u029f\u02a0\7U\2\2\u02a0\u02a1\7M\2\2\u02a1J\3\2\2\2\u02a2"+
+		"\u02a3\7K\2\2\u02a3\u02a4\7P\2\2\u02a4\u02a5\7V\2\2\u02a5\u02a6\7G\2\2"+
+		"\u02a6\u02a7\7T\2\2\u02a7\u02a8\7T\2\2\u02a8\u02a9\7W\2\2\u02a9\u02aa"+
+		"\7R\2\2\u02aa\u02ab\7V\2\2\u02abL\3\2\2\2\u02ac\u02ad\7K\2\2\u02ad\u02ae"+
+		"\7T\2\2\u02ae\u02af\7R\2\2\u02af\u02b0\7V\2\2\u02b0N\3\2\2\2\u02b1\u02b2"+
+		"\7U\2\2\u02b2\u02b3\7K\2\2\u02b3\u02b4\7I\2\2\u02b4\u02b5\7P\2\2\u02b5"+
+		"\u02b6\7C\2\2\u02b6\u02b7\7N\2\2\u02b7P\3\2\2\2\u02b8\u02b9\7R\2\2\u02b9"+
+		"\u02ba\7T\2\2\u02ba\u02bb\7G\2\2\u02bb\u02bc\7U\2\2\u02bc\u02bd\7G\2\2"+
+		"\u02bd\u02be\7V\2\2\u02beR\3\2\2\2\u02bf\u02c0\7G\2\2\u02c0\u02c1\7P\2"+
+		"\2\u02c1\u02c2\7F\2\2\u02c2T\3\2\2\2\u02c3\u02c4\7R\2\2\u02c4\u02c5\7"+
+		"T\2\2\u02c5\u02c6\7Q\2\2\u02c6\u02c7\7E\2\2\u02c7\u02c8\7G\2\2\u02c8\u02c9"+
+		"\7F\2\2\u02c9\u02ca\7W\2\2\u02ca\u02cb\7T\2\2\u02cb\u02cc\7G\2\2\u02cc"+
+		"V\3\2\2\2\u02cd\u02ce\7R\2\2\u02ce\u02cf\7T\2\2\u02cf\u02d0\7Q\2\2\u02d0"+
+		"\u02d1\7E\2\2\u02d1X\3\2\2\2\u02d2\u02d3\7K\2\2\u02d3\u02d4\7F\2\2\u02d4"+
 		"\u02d5\7G\2\2\u02d5\u02d6\7P\2\2\u02d6\u02d7\7V\2\2\u02d7\u02d8\7K\2\2"+
 		"\u02d8\u02d9\7E\2\2\u02d9\u02da\7C\2\2\u02da\u02db\7N\2\2\u02dbZ\3\2\2"+
 		"\2\u02dc\u02dd\7F\2\2\u02dd\u02de\7K\2\2\u02de\u02df\7U\2\2\u02df\u02e0"+
@@ -787,7 +787,7 @@ public class SmallPearlLexer extends Lexer {
 		"\u05e5\u05e8\5\u01c7\u00e4\2\u05e6\u05e8\7a\2\2\u05e7\u05e4\3\2\2\2\u05e7"+
 		"\u05e5\3\2\2\2\u05e7\u05e6\3\2\2\2\u05e8\u05eb\3\2\2\2\u05e9\u05e7\3\2"+
 		"\2\2\u05e9\u05ea\3\2\2\2\u05ea\u01a0\3\2\2\2\u05eb\u05e9\3\2\2\2\u05ec"+
-		"\u05ed\5\u01d5\u00eb\2\u05ed\u01a2\3\2\2\2\u05ee\u05f0\7)\2\2\u05ef\u05f1"+
+		"\u05ed\5\u01c1\u00e1\2\u05ed\u01a2\3\2\2\2\u05ee\u05f0\7)\2\2\u05ef\u05f1"+
 		"\5\u01a5\u00d3\2\u05f0\u05ef\3\2\2\2\u05f0\u05f1\3\2\2\2\u05f1\u05f2\3"+
 		"\2\2\2\u05f2\u05f3\7)\2\2\u05f3\u01a4\3\2\2\2\u05f4\u05f7\5\u01a7\u00d4"+
 		"\2\u05f5\u05f7\5\u01a9\u00d5\2\u05f6\u05f4\3\2\2\2\u05f6\u05f5\3\2\2\2"+

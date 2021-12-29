@@ -1,11 +1,11 @@
-public class MyListener extends SmallPearlBaseListener {
+public class MyListener extends OpenPearlBaseListener {
 
-    private SmallPearlParser parser;
-    public MyListener(SmallPearlParser parser) { this.parser = parser;  }
+    private OpenPearlParser parser;
+    public MyListener(OpenPearlParser parser) { this.parser = parser;  }
 
 
 
-    public void exitProgram(SmallPearlParser.ProgramContext ctx) {
+    public void exitProgram(OpenPearlParser.ProgramContext ctx) {
         System.out.println(">>> in MyListener for function");
         System.out.println(parser.getTokenStream().getText(ctx));
     }

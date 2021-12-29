@@ -58,15 +58,15 @@ public class Main {
       }
 
       CharStream input = CharStreams.fromFileName(filePath.toString());
-      var lexer = new SmallPearlLexer(input);
+      var lexer = new OpenPearlLexer(input);
 
       TokenStream tokenStream = new CommonTokenStream(lexer);
-      var parser = new SmallPearlParser(tokenStream);
+      var parser = new OpenPearlParser(tokenStream);
       parser.setBuildParseTree(true);
 
       var walker = new ParseTreeWalker();
       MyListener listener = new MyListener(parser);
-      walker.walk(new SmallPearlBaseListener(), parser.program());
+      walker.walk(new OpenPearlBaseListener(), parser.program());
 
 
       //generator.printDebugOutput();
