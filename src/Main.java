@@ -29,10 +29,16 @@
 import org.antlr.v4.runtime.*;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
@@ -43,15 +49,58 @@ import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
 public class Main {
 
-  public static void main(String[] args) {
-    try {
+  private static HashMap<String, Integer> m_rules = new HashMap();
 
+  public static void main(String[] args) throws IOException {
+    //runTest(args);
+    sumOfRules();
+  }
+  private static void sumOfRules() throws IOException {
+    boolean fileNotFound = false;
+    int count = 0;
+    String fileName = "GeneratedRules";
+    String fileSuffix = ".txt";
+
+    while (!fileNotFound) {
+      Path fileRules = Paths.get(fileName + count + fileSuffix);
+      if (Files.exists(fileRules)) {
+        List<String> lines = Files.lines(fileRules, StandardCharsets.UTF_8).collect(Collectors.toList());
+
+        for (var line : lines) {
+          if (line != null) {
+            if (!m_rules.containsKey(line)) {
+              m_rules.put(line, 0);
+            }
+            m_rules.put(line, m_rules.get(line) + 1);
+          }
+        }
+
+        count++;
+      } else {
+        fileNotFound = true;
+      }
+    }
+
+    try (FileWriter fileWriter = new FileWriter("SumRulesUsed.txt", false)) {
+      m_rules.forEach((r, c) -> {
+        try {
+          fileWriter.write(r + "; " + c + System.lineSeparator());
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
+      });
+    } catch (IOException ex) {
+      System.out.println("Error:" + ex);
+    }
+  }
+  private static void runTest(String[] args) {
+    try {
       // DEBUG
       Path path = Paths.get("");
       String directoryName = path.toAbsolutePath().toString();
       // DEBUG
 
-      Path filePath = Paths.get("PearlTest.prl");
+      Path filePath = Paths.get("Generated0.prl");
 
       for(int i=0; i < args.length; i++) {
         String option = args[i];
@@ -101,6 +150,5 @@ public class Main {
     } catch (IOException ex) {
       System.out.println("Error:"+ex);
     }
-
   }
 }
