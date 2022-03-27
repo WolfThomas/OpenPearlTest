@@ -52,8 +52,8 @@ public class Main {
   private static HashMap<String, Integer> m_rules = new HashMap();
 
   public static void main(String[] args) throws IOException {
-    //runTest(args);
-    sumOfRules();
+    runTest(args);
+    //sumOfRules();
   }
   private static void sumOfRules() throws IOException {
     boolean fileNotFound = false;
